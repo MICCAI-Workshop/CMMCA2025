@@ -11,15 +11,23 @@
     <meta name="KeyWords" content="Conference">
     <title>2025 CMMCA Workshop</title>
     <style>
-        /* hanging indent for custom dot lists */
+        /* modern hanging bullet list without extraneous &middot; */
         ul.dot-list {
-            list-style-type: none;
-            padding-left: 1.2em;  /* space reserved for the dot */
+            list-style: none;
             margin: 0;
+            padding: 0 0 0 0; /* reset */
         }
         ul.dot-list li {
-            text-indent: -0.8em; /* pull first line left to show dot */
-            padding-left: 0.8em;  /* push text right so that following lines align */
+            position: relative;           /* reference for pseudo bullet */
+            padding-left: 1.2em;          /* space for the bullet */
+            line-height: 1.4em;           /* consistent spacing */
+        }
+        ul.dot-list li::before {
+            content: "\2022";           /* Unicode bullet • */
+            position: absolute;
+            left: 0;                     /* hang bullet to the left */
+            top: 0;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -32,47 +40,30 @@
             <span class="title1">CMMCA</span><span class="title2">Workshop</span> <img src="assets/miccai2025.png" style="width: 20%;margin-top: -40px;">
         </div>
         <div class="bottom-right">
-            SEP 27<sup>th</sup>, 2025
-            <br>
-            Computational Mathematics Modeling in Cancer Analysis
+            SEP 27<sup>th</sup>, 2025<br>Computational Mathematics Modeling in Cancer Analysis
         </div>
     </div>
 
     <table class="navigation">
         <tr>
-            <td class="navigation">
-                <a class="current" title="Workshop Home Page" href="index.html">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Keynote Speakers" href="speakers/index.html">Keynotes</a> 
-            </td>
-            <td class="navigation">
-                <a title="Register for the Workshop" href="submission/index.html">Submission</a>
-            </td>
-            <td class="navigation">
-                <a title="Agenda of the Workshop" href="agenda/index.html">Agenda</a>
-            </td>
-            <td class="navigation">
-                <a title="Recordings of the Workshop" href="recordings/index.html">Recordings</a>
-            </td>
+            <td class="navigation"><a class="current" href="index.html">Home</a></td>
+            <td class="navigation"><a href="speakers/index.html">Keynotes</a></td>
+            <td class="navigation"><a href="submission/index.html">Submission</a></td>
+            <td class="navigation"><a href="agenda/index.html">Agenda</a></td>
+            <td class="navigation"><a href="recordings/index.html">Recordings</a></td>
         </tr>
     </table>
 
-
-    <h2>
-        Timeline
-    </h2>
+    <h2>Timeline</h2>
     <p>
-        <br>&#x2022; April 20<sup>th</sup>, 2025: Submission Portal Opens
-        <br>&#x2022; June 25<sup>th</sup>, 2025: Submission Deadline
-        <br>&#x2022; July 16<sup>th</sup>, 2025: Notification
-        <br>&#x2022; July 30<sup>th</sup>, 2025: Camera-ready
-        <br>&#x2022; September 27<sup>th</sup>, 2025: Workshop Event
+        &#x2022; April&nbsp;20<sup>th</sup>,&nbsp;2025: Submission Portal Opens<br>
+        &#x2022; June&nbsp;25<sup>th</sup>,&nbsp;2025: Submission Deadline<br>
+        &#x2022; July&nbsp;16<sup>th</sup>,&nbsp;2025: Notification<br>
+        &#x2022; July&nbsp;30<sup>th</sup>,&nbsp;2025: Camera‑ready<br>
+        &#x2022; September&nbsp;27<sup>th</sup>,&nbsp;2025: Workshop Event
     </p>
 
-    <h2 style="text-align: center;">
-        Submission 
-    </h2>
+    <h2 style="text-align:center;">Submission</h2>
 
     <div class="submission" style="max-width:900px;margin:0 auto;line-height:1.6;">
 
@@ -83,17 +74,29 @@
 
         <h3 style="color:#007bff;">Category&nbsp;2: Extended&nbsp;Abstracts (for Presentation only)</h3>
         <p><b>Abstract Requirements:</b> This year we also welcome extended abstracts reporting ongoing work, preliminary results, or valuable insights, whether these are technical studies, challenge reports, dataset descriptions, or novel ideas. This category is suitable for:</p>
-            <br>&#x2022; Work‑in‑progress</li>
-            <br>&#x2022; Current challenges and dataset papers intended for discussion</li>
-            <br>&#x2022; Short summaries of recently published papers (in other relevant venues) that the community is interested in for sharing and discussion</li>
+        <ul class="dot-list">
+            <li>Work‑in‑progress</li>
+            <li>Current challenges and dataset papers intended for discussion</li>
+            <li>Short summaries of recently published papers (in other relevant venues) that the community is interested in for sharing and discussion</li>
+        </ul>
         <p><b>Presentation and Publication:</b> Accepted abstracts will be presented at the workshop but <b>will not</b> be included in the published proceedings. We look forward to welcoming more participants for idea sharing and discussion of future perspectives.</p>
-        <p><b>Submission Format:</b> <b>4 pages</b> of main text + <b>2 pages</b> of references (<i>Springer LNCS format</i>).</p>
+        <p><b>Submission Format:</b> <b>4&nbsp;pages</b> of main text + <b>2&nbsp;pages</b> of references (<i>Springer LNCS format</i>).</p>
 
         <p style="font-size:1.2em;"><b>Submission Guideline:</b></p>
-            <br>&#x2022; All submissions should be made through the Conference Management Toolkit (CMT) system: <a href="https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index">https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index</a> or search “<i>The 3rd Workshop on Computational Mathematics Modeling in Cancer Analysis</i>” in CMT.</li>
-            <br>&#x2022; Papers must be submitted in <b>PDF format</b> using either the MICCAI&nbsp;2025 <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-LaTeX-Template.zip">LaTeX template</a></b> or <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-Word-Template.zip">MS Word template</a></b>.</li>
-            <br>&#x2022; Conflict of Interest Statement:</b> In case of acceptance, at least one author is required to register and present the paper at CMMCA&nbsp;2025. To avoid conflicts of interest between authors and reviewers, all co‑author information and a complete and accurate list of domain conflicts must be entered in the submission form by the submission deadline. Your paper may be rejected if full authorship and domain conflicts are not disclosed.</li>
-            <br>&#x2022; Submission Deadline:</b> 23:59, Pacific Time, <b>June 25<sup>th</sup>, 2025</b>.</li>
+        <ul class="dot-list">
+            <li>All submissions should be made through the Conference Management Toolkit (CMT) system: <a href="https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index">https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index</a> or search “<i>The 3rd Workshop on Computational Mathematics Modeling in Cancer Analysis</i>” in CMT.</li>
+            <li>Papers must be submitted in <b>PDF format</b> using either the MICCAI&nbsp;2025 <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-LaTeX-Template.zip">LaTeX&nbsp;template</a></b> or <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-Word-Template.zip">MS&nbsp;Word&nbsp;template</a></b>.</li>
+            <li><b>Conflict of Interest Statement:</b> In case of acceptance, at least one author is required to register and present the paper at CMMCA&nbsp;2025. To avoid conflicts of interest between authors and reviewers, all co‑author information and a complete and accurate list of domain conflicts must be entered in the submission form by the submission deadline. Your paper may be rejected if full authorship and domain conflicts are not disclosed.</li>
+            <li><b>Submission Deadline:</b> 23:59, Pacific&nbsp;Time, <b>June&nbsp;25<sup>th</sup>, 2025</b>.</li>
+        </ul>
+
+        <p style="font-size:1.2em;">><b>Submission Guideline:</b></p>
+        <ul class="dot-list">
+            <li>All submissions should be made through the Conference Management Toolkit (CMT) system: <a href="https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index">https://cmt3.research.microsoft.com/CMMCA2025/Submission/Index</a> or search “<i>The 3rd Workshop on Computational Mathematics Modeling in Cancer Analysis</i>” in CMT.</li>
+            <li>Papers must be submitted in <b>PDF format</b> using either the MICCAI&nbsp;2025 <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-LaTeX-Template.zip">LaTeX template</a></b> or <b><a href="https://conferences.miccai.org/2025/files/downloads/MICCAI2025-Word-Template.zip">MS Word template</a></b>.</li>
+            <li><b>Conflict of Interest Statement:</b> In case of acceptance, at least one author is required to register and present the paper at CMMCA&nbsp;2025. To avoid conflicts of interest between authors and reviewers, all co‑author information and a complete and accurate list of domain conflicts must be entered in the submission form by the submission deadline. Your paper may be rejected if full authorship and domain conflicts are not disclosed.</li>
+            <li><b>Submission Deadline:</b> 23:59, Pacific Time, <b>June 25<sup>th</sup>, 2025</b>.</li>
+        </ul>
 
     </div>
 
